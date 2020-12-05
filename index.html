@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    #main {
+        background-color: rgb(99, 16, 252);
+
+        padding: 40px;
+        height: 1000px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 3em;
+    }
+</style>
+
+<body>
+    <div align="center" id="main">
+        <h1 id="h1">10</h1>
+    </div>
+
+    <script>
+        var bg = document.getElementById('main')
+        var countElem = document.getElementById('h1');
+        var initCount = countElem.innerHTML
+        setInterval(function () {
+
+
+
+            countElem.innerHTML = initCount;
+            if (initCount > 0)
+                initCount = initCount - 1
+
+            if (initCount % 2 == 0) { bg.style.backgroundColor = "rgb(99, 16, 252)" }
+            else {
+                bg.style.backgroundColor = "rgb(228, 24, 75)"
+            }
+
+        }, 1000)
+
+
+    </script>
+</body>
+
+</html>
